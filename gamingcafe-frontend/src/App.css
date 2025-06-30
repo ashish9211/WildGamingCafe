@@ -1,0 +1,140 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*slide-animation start*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Common wave background style */
+.sliding-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  z-index: -1;
+  opacity: 0.5;
+  background-image: linear-gradient(-60deg, #0078d4 50%, #349beb 50%);
+  /* background-image: linear-gradient(-60deg, #b31217 50%, #e52d27 50%); */
+  animation: slide 8s ease-in-out infinite alternate;
+}
+
+.sliding-bg.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 10s;
+}
+
+.sliding-bg.bg3 {
+  animation-duration: 12s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/*slide-animation end*/
+/*slide-animation-2 start*/
+/* Common wave background style */
+.sliding-bg1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -50%; /* This is good for covering the whole screen with a smaller gradient strip */
+  right: -50%;
+  z-index: -1;
+  opacity: 0.5;
+  background-image: linear-gradient(
+    -60deg,
+    #ff993c 50%,
+    #d48235 50%
+  ); /* Your blue gradient */
+  /* If you want to use the red gradient again: */
+  /* background-image: linear-gradient(-60deg, #b31217 50%, #e52d27 50%); */
+
+  /* NEW ANIMATION */
+  animation: pulseSway 15s ease-in-out infinite alternate; /* Adjust duration */
+}
+
+.sliding-bg1.bg2 {
+  /* Offset for layering effect */
+  animation-direction: alternate-reverse;
+  animation-duration: 18s; /* Different duration for varied motion */
+  opacity: 0.4; /* Slightly less opaque */
+  background-image: linear-gradient(
+    -60deg,
+    #ff993c 50%,
+    #d48235 50%
+  ); /* Inverted or different color for bg2 */
+}
+
+.sliding-bg1.bg3 {
+  /* Offset for layering effect */
+  animation-duration: 20s; /* Different duration for varied motion */
+  opacity: 0.3; /* Even less opaque */
+  background-image: linear-gradient(
+    -30deg,
+    #ff993c 50%,
+    #d48235 50%
+  ); /* Can be same or different color */
+}
+
+/* NEW KEYFRAMES */
+@keyframes pulseSway {
+  0% {
+    transform: translateX(-30%) scale(1); /* Start slightly left, normal size */
+  }
+  33% {
+    transform: translateX(10%) scale(1.05) rotate(1deg); /* Move right, slight enlarge, slight tilt */
+  }
+  66% {
+    transform: translateX(-20%) scale(1) rotate(-1deg); /* Move left, back to normal size, slight tilt other way */
+  }
+  100% {
+    transform: translateX(0%) scale(1.02) rotate(0deg); /* End at center, slight enlarge, no tilt */
+  }
+}
+/*slide-animation-2 end*/
+
+.stroke-text {
+  -webkit-text-stroke: 4px white; /* Adjust thickness & color */
+  color: transparent;
+}
+
+.stroke-text-1 {
+  -webkit-text-stroke: 4px #ff993c; /* Adjust thickness & color */
+  color: transparent;
+}
+
+.gList:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 11px #ff993c;
+  color: #bbaaaa;
+}

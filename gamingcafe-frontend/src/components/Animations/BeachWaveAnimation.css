@@ -1,0 +1,190 @@
+/* src/components/BeachWaveAnimation.css */
+
+/* Main container for the animation. It's fixed to the viewport */
+.beach-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2; /* Ensures it's behind your main content and tsparticles */
+  overflow: hidden; /* Important to hide gradient overflow */
+
+  /* The "beach" color will be the background of this container */
+  background-color: #fffacd; /* A pale yellow/cream for the beach effect */
+}
+
+/* Base style for all wave layers */
+.wave-layer {
+  position: absolute;
+  bottom: 0; /* Aligns waves to the bottom, where they "touch the beach" */
+  left: -50%; /* Allows the wide gradient to slide across the screen */
+  width: 200%; /* Make it wider than 100% to allow for continuous sliding effect */
+  opacity: 0.6; /* Base opacity, will be varied per layer */
+  pointer-events: none; /* Allows clicks to pass through to elements below */
+  will-change: transform; /* Hint for browser optimization */
+}
+
+/* Individual Wave Layer Styling and Animation */
+
+/* Wave 1 - Deepest, slowest, darkest blue */
+.wave-layer.wave-1 {
+  height: 80%; /* Covers up to 80% from bottom of container */
+  background-image: linear-gradient(
+    90deg,
+    rgba(26, 115, 232, 0.8) 0%,
+    /* Deep Blue */ rgba(66, 133, 244, 0.8) 25%,
+    /* Medium Blue */ rgba(102, 163, 255, 0.8) 50%,
+    /* Light Blue */ rgba(66, 133, 244, 0.8) 75%,
+    rgba(26, 115, 232, 0.8) 100%
+  );
+  animation: waveSlide1 30s linear infinite alternate;
+  opacity: 0.6;
+}
+
+/* Wave 2 - Slightly lighter, faster, higher */
+.wave-layer.wave-2 {
+  height: 75%; /* Slightly higher than wave 1 */
+  background-image: linear-gradient(
+    90deg,
+    rgba(66, 133, 244, 0.7) 0%,
+    rgba(102, 163, 255, 0.7) 25%,
+    rgba(163, 217, 255, 0.7) 50%,
+    /* Very Light Blue */ rgba(102, 163, 255, 0.7) 75%,
+    rgba(66, 133, 244, 0.7) 100%
+  );
+  animation: waveSlide2 27s linear infinite alternate-reverse;
+  opacity: 0.55;
+}
+
+/* Wave 3 - Even lighter, faster, higher */
+.wave-layer.wave-3 {
+  height: 70%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(102, 163, 255, 0.6) 0%,
+    rgba(163, 217, 255, 0.6) 25%,
+    rgba(179, 229, 252, 0.6) 50%,
+    /* Pale Blue */ rgba(163, 217, 255, 0.6) 75%,
+    rgba(102, 163, 255, 0.6) 100%
+  );
+  animation: waveSlide3 24s linear infinite alternate;
+  opacity: 0.5;
+}
+
+/* Wave 4 - More subtle, faster */
+.wave-layer.wave-4 {
+  height: 65%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(163, 217, 255, 0.5) 0%,
+    rgba(179, 229, 252, 0.5) 50%,
+    rgba(163, 217, 255, 0.5) 100%
+  );
+  animation: waveSlide4 21s linear infinite alternate-reverse;
+  opacity: 0.45;
+}
+
+/* Wave 5 - Closest to surface, fastest, very light */
+.wave-layer.wave-5 {
+  height: 60%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(179, 229, 252, 0.4) 0%,
+    rgba(224, 247, 250, 0.4) 50%,
+    /* Very Pale Blue */ rgba(179, 229, 252, 0.4) 100%
+  );
+  animation: waveSlide5 18s linear infinite alternate;
+  opacity: 0.4;
+}
+
+/* Wave 6 */
+.wave-layer.wave-6 {
+  height: 55%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(224, 247, 250, 0.3) 0%,
+    rgba(240, 248, 255, 0.3) 50%,
+    /* AliceBlue, almost white */ rgba(224, 247, 250, 0.3) 100%
+  );
+  animation: waveSlide6 15s linear infinite alternate-reverse;
+  opacity: 0.35;
+}
+
+/* Wave 7 */
+.wave-layer.wave-7 {
+  height: 50%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(240, 248, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    /* White, very subtle */ rgba(240, 248, 255, 0.2) 100%
+  );
+  animation: waveSlide7 12s linear infinite alternate;
+  opacity: 0.3;
+}
+
+/* Keyframe Animations for horizontal wave movement */
+
+@keyframes waveSlide1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  } /* Moves across half of its 200% width */
+}
+
+@keyframes waveSlide2 {
+  0% {
+    transform: translateX(50%);
+  } /* Starts offset */
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes waveSlide3 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+}
+
+@keyframes waveSlide4 {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes waveSlide5 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+@keyframes waveSlide6 {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes waveSlide7 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
