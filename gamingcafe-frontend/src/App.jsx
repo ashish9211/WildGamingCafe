@@ -18,21 +18,24 @@ function App() {
 
   return (
     <>
-
+   <BrowserRouter basename="/WildGamingCafe">
     <Router>
       <Navbar/>
         <Routes>
-          <Route path="/"   element={<HomePage/>} /> 
-          <Route path='/contact' element={<Contact/>}/>
-          <Route path='/events' element={<EventsPage/>}/>
-          <Route path='/gaminglounge' element={<GamingLounge/>}/>
-          <Route path='/promo' element={<BeachWaveAnimation/>}/>
+            
+            <Route path="/"   element={<HomePage/>} /> 
+            <Route path='/contact' element={<Contact/>}/>
+            <Route path='/events' element={<EventsPage/>}/>
+            <Route path='/WildGamingCafe/gaminglounge' element={<GamingLounge/>}/>
+            <Route path='/promo' element={<BeachWaveAnimation/>}/>
           {/* <Route path='/promo' element={<TestSlideAnimation/>}/> */}
-          <Route path='/gamelibrary' element={<GameLibrary/>}/>
+            <Route path='/gamelibrary' element={<GameLibrary/>}/>
+          
         </Routes>
-      
+       
       <Footer/>
     </Router>
+  </BrowserRouter> 
       
       
       
