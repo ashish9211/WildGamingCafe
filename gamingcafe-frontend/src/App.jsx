@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-   <BrowserRouter basename="/WildGamingCafe">
+   <BrowserRouter >
     
       <Navbar/>
         <Routes>
