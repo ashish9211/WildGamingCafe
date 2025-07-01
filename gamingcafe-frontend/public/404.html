@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafrex/spa-github-pages
+      // This script takes the current url and converts the path and query
+      // string into just the query string, and then redirects the browser
+      // to the new url with only the query string and hash fragment,
+      // but preserving the full path to retrieve the original page.
+      // The script is designed to be used in the 404.html file to work as
+      // a default redirect for deep links that are not found on the server.
+      // If you are using React Router, this is equivalent to using a
+      // <Redirect to="/404" /> component or similar.
+      // Example: `https://<your-username>.github.io/my-app/some/path?param=value#hash`
+      //          will be redirected to:
+      //          `https://<your-username>.github.io/my-app/?p=/some/path&param=value#hash`
+      // Note: this script uses the history API for a cleaner URL after redirect,
+      //       but if you need to support older browsers, use window.location.replace
+      //       instead.
+      var path = window.location.pathname;
+      var query = window.location.search;
+      var fragment = window.location.hash;
+      if (path.includes('.')) { // If the path contains a dot, it's likely a file, not a route
+        window.location.replace(path + query + fragment);
+      } else {
+        window.location.replace(
+          window.location.protocol + '//' +
+          window.location.hostname +
+          (window.location.port ? ':' + window.location.port : '') +
+          window.location.pathname.split('/').slice(0, -1).join('/') + // remove last path segment
+          '/' + // add back trailing slash
+          '?p=' + encodeURIComponent(path + query) + fragment
+        );
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
