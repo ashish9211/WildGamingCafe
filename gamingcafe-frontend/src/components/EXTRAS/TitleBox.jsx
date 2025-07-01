@@ -1,4 +1,5 @@
 import heroImg from '../../assets/lounge11.jpg'
+import { Link } from 'react-router-dom';
 const TitleBox = ({ title }) => {
       return (
   <section className="w-[60%] mx-auto">
@@ -35,13 +36,13 @@ const TitleBox = ({ title }) => {
   <p className="bg-black/20 text-white font-montserrat font-semibold text-base md:text-xl leading-relaxed p-6 rounded-md break-words max-w-full">
     We are constantly updating our library with new games for you to enjoy. Check out our current library below!
   </p>
-  <a href="/gamelibrary" className="mt-2">
+  <Link to="/gamelibrary" className="mt-2">
     <button
       className="relative inline-flex items-center border-2 justify-center px-5 py-2.5 min-w-[200px] text-white text-base md:text-xl font-extrabold uppercase font-lato bg-[#0078D7] hover:bg-white hover:text-[#0078D7] transition-colors duration-300 text-center rounded-none"
     >
       Game Library
     </button>
-  </a>
+  </Link>
 </div>
         </div>
     </section>

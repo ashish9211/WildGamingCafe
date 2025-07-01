@@ -32,9 +32,9 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-7 text-white text-base font-lato font-bold  max-w-xl ml-7">
-          <a href="/gaminglounge" className="animated-underline whitespace-nowrap">GAMING LOUNGE</a>
-          <a href="/events" className="animated-underline whitespace-nowrap"> EVENTS</a>
-          <a href="/promo" className="animated-underline whitespace-nowrap"> PROMOTIONS</a>
+          <Link to="/gaminglounge" className="animated-underline whitespace-nowrap">GAMING LOUNGE</Link>
+          <Link to="/events" className="animated-underline whitespace-nowrap"> EVENTS</Link>
+          <Link to="/promo" className="animated-underline whitespace-nowrap"> PROMOTIONS</Link>
           
         </div>
 

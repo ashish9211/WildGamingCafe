@@ -4,7 +4,7 @@ import './BeachWaveAnimation.css'; // Import the CSS file you'll create
 
 const BeachWaveAnimation = () => {
   return (
-    <div className="beach-animation-container">
+    <div className="relative h-[100vh] flex flex-col overflow-hidden">
       {/* Wave Layers - add or remove more as desired for depth */}
       <div className="wave-layer wave-1"></div>
       <div className="wave-layer wave-2"></div>
