@@ -12,13 +12,15 @@ import TestSlideAnimation from './components/Animations/TestSlideAnimation'
 import SectionWithImageAndText from './components/EXTRAS/SectionWithImageAndText';
 import GameLibrary from './components/Pages/GameLibrary';
 import BeachWaveAnimation from './components/Animations/BeachWaveAnimation';
+import ImageTextLayout from './components/Grid/ImageTextLayout';
+import PromoPage from './components/Pages/PromoPage';
 
 function App() {
   
 
   return (
     <>
-   <BrowserRouter >
+   <BrowserRouter  >
     
       <Navbar/>
         <Routes>
@@ -27,8 +29,7 @@ function App() {
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/events' element={<EventsPage/>}/>
             <Route path='/gaminglounge' element={<GamingLounge/>}/>
-            <Route path='/promo' element={<BeachWaveAnimation/>}/>
-          {/* <Route path='/promo' element={<TestSlideAnimation/>}/> */}
+            <Route path='/promo' element={<PromoPage/>}/>
             <Route path='/gamelibrary' element={<GameLibrary/>}/>
           
         </Routes>

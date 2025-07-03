@@ -80,7 +80,7 @@ export default function Contact() {
           <div>
             <h3 className="text-lg sm:text-xl font-montserrat font-extrabold animated-underline mb-1">Address</h3>
             <p className="text-sm sm:text-base font-lato font-medium leading-relaxed">
-              2nd Floor, Vaishnavi Lamani Arcade, 209,<br />
+              209, 2nd Floor, Vaishnavi Lamani Arcade,<br />
               Doolapally Rd, above Ratnadeep Supermarket,<br />
               Devender Colony, Kompally,<br />
               Hyderabad, Telangana 500014, India

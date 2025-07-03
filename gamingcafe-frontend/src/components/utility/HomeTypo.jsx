@@ -39,14 +39,15 @@ const HomeTypo = () => {
     {/* Buttons to the right of text */}
     <div className="flex flex-col gap-4 md:ml-8 flex-shrink-0 min-w-[150px]">
       {['RATES', 'GAMES', 'EVENTS'].map(label => (
-        <button
+        <a
           key={label}
+          href={label === 'RATES' ? '/gaminglounge#rates' : label === 'GAMES' ? '/gaminglounge#games' : '/events'}
           className="relative inline-flex items-center justify-center p-0.5 text-sm font-medium text-white rounded-none group bg-gradient-to-br from-cyan-500 to-blue-500 hover:text-white focus:ring-4 focus:ring-cyan-200"
         >
           <span className="relative px-5 py-2.5 font-extrabold font-lato bg-black  group-hover:bg-transparent min-w-[150px] text-center">
             {label}
           </span>
-        </button>
+        </a>
       ))}
     </div>
 
