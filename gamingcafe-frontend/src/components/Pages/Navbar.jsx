@@ -73,7 +73,7 @@ const Navbar = () => {
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden flex items-center ml-auto">
             <button
-              className="w-4 h-4 sm:w-6 sm:h-6 bg-transparent flex items-center justify-center group border border-transparent hover:bg-white transition-all duration-300 rounded"
+              className="w-4 h-4 sm:w-6 sm:h-6 bg-transparent flex items-center justify-center group border border-transparent hover:bg-[#ff993c] transition-all duration-300 "
               onClick={() => setMenuOpen(!menuOpen)}
             >
                     <i className="fa-solid fa-bars text-white group-hover:text-black text-lg sm:text-xl transition-all duration-300"></i>
@@ -87,8 +87,8 @@ const Navbar = () => {
         <div className="md:hidden mt-2 px-4 pb-4 text-white bg-black/90 rounded-none shadow flex flex-col items-center space-y-4">
           <a href="/gaminglounge" className="animated-underline text-base">GAMING LOUNGE</a>
           <a href="/events" className="animated-underline text-base">EVENTS</a>
-          <a href="/events" className="animated-underline text-base">PROMOTIONS</a>
-          <a href="/events" className="animated-underline text-base">SHOP</a>
+          <a href="/promo" className="animated-underline text-base">PROMOTIONS</a>
+          
 
           <div className="flex space-x-3 pt-2">
             <i className="fa-brands fa-twitter hover:text-blue-400 cursor-pointer"></i>
@@ -97,9 +97,9 @@ const Navbar = () => {
             <i className="fa-brands fa-discord hover:text-indigo-400 cursor-pointer"></i>
           </div>
 
-          <button className="mt-2 px-6 py-1.5 text-sm font-semibold font-lato text-black bg-white border-2 border-white rounded-none hover:bg-black hover:text-white transition">
+          <Link to='/contact' className="mt-2 px-6 py-1.5 text-sm font-semibold font-lato text-black bg-white border-2 border-white rounded-none hover:bg-black hover:text-white transition">
             CONTACT
-          </button>
+          </Link>
         </div>
       )}
     </nav>

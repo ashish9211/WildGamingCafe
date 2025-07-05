@@ -10,8 +10,8 @@ export default function Footer() {
     <footer className="bg-black text-white relative overflow-hidden">
       {/* Particle background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-    <ParticlesBackgroundTri />
-  </div>
+          <ParticlesBackgroundTri />
+      </div>
 
       {/* Footer Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -23,10 +23,10 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="flex flex-col items-center md:items-start space-y-2">
-          <h3 className="font-poppins font-semibold mb-1 animated-underline">Contact</h3>
-          <p className="text-sm font-lato font-bold">📞 +91-98765-43210</p>
+          <h3 className="font-poppins font-semibold mb-1 animated-underline">Phone:</h3>
+          <p className="text-sm font-lato font-bold">📞+91-9876543210</p>
 
-          <h3 className="font-poppins font-semibold animated-underline mt-4">Hours</h3>
+          <h3 className="font-poppins font-semibold animated-underline mt-4">Hours:</h3>
           <div className="text-sm space-y-1">
             <div className="flex items-start">
               <span className="w-20 font-bold font-lato">Mon–Fri:</span>

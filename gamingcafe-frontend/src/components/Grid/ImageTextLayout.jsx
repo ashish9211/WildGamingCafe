@@ -101,9 +101,11 @@ const ImageTextLayout = ()=>{
                          <p className="text-white text-base font-montserrat font-semibold md:text-lg leading-relaxed text-center md:text-right">
                              We are constantly updating our library with new games for you to enjoy. Check out our current library below!
                          </p>
-                         <div className="mt-6 text-center md:text-right">
-                             <a href="/gamelibrary" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold font-lato py-3 px-6 rounded-lg transition-colors duration-300">
-                                 GAME LIBRARY
+                         <div className="mt-6 text-center md:text-center">
+                             <a href="/gamelibrary" className="relative inline-flex items-center justify-center p-0.5 text-sm font-medium text-white rounded-none group hover:text-[#0682dc] focus:ring-4 focus:ring-green-200" style={{background: 'linear-gradient(to bottom right, #06dc3a, #05c233)'}}>
+                                 <span className="relative px-6 py-3 font-extrabold font-lato bg-black transition-all duration-300" style={{'--tw-bg-opacity': '1'}} onMouseEnter={(e) => e.target.style.background = 'linear-gradient(to bottom right, #ff993c, #e6822e)'} onMouseLeave={(e) => e.target.style.background = 'black'}>
+                                     GAMES LIBRARY
+                                 </span>
                              </a>
                          </div>
                      </div>

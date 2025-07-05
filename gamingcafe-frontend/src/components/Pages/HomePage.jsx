@@ -23,6 +23,9 @@ const HomePage = () => {
           autoPlay
           loop
           muted
+          playsInline
+          disablePictureInPicture
+          controls={false}
           className="w-full h-full object-cover" // Video covers the section
         />
         {/* Overlay for text, covers the video */}

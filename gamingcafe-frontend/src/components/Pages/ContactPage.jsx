@@ -1,5 +1,6 @@
 import bgImage from '../../assets/aigamer.jpg';
 import { useState } from 'react';
+
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
@@ -10,6 +11,7 @@ import {
   FaDiscord,
   FaChevronDown
 } from 'react-icons/fa';
+import LogoColors from '../Animations/LogoColors';
 
 
 export default function Contact() {
@@ -60,26 +62,28 @@ export default function Contact() {
       </section>
 
       {/* RIGHT PANEL */}
-      <aside className="relative w-full md:w-2/5 bg-red-950 flex items-start md:items-center justify-center py-8 md:py-16 px-4 overflow-hidden">
-        
-        <div className="text-white w-full max-w-md space-y-6">
+      <aside className="relative w-full bg-[#ff993c] md:w-2/5 flex items-start md:items-center justify-center py-8 md:py-16 px-4 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-30">
+        <LogoColors />
+        </div>
+        <div className="text-black w-full max-w-md space-y-6  ">
           {/* Phone */}
           <div>
-            <h3 className="text-lg sm:text-xl font-montserrat font-extrabold animated-underline mb-1">Phone</h3>
-            <p className="text-base  font-lato font-medium sm:text-lg">+91-12345-67890</p>
+            <h3 className="text-xl sm:text-2xl font-montserrat font-extrabold animated-underline mb-1">Phone:</h3>
+            <p className="text-xl  font-semibold font-lato  sm:text-xl">+91-12345-67890</p>
           </div>
           {/* Hours */}
           <div>
-            <h3 className="text-lg sm:text-xl font-montserrat font-extrabold animated-underline mb-1">Hours</h3>
-            <p className="text-base sm:text-lg font-lato font-medium leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-montserrat font-extrabold animated-underline mb-1">Hours:</h3>
+            <p className="text-lg sm:text-xl font-lato font-semibold leading-relaxed">
               Mon–Fri:  9 AM–12 PM<br />
               Sat–Sun: 12 PM–12 AM
             </p>
           </div>
           {/* Address */}
           <div>
-            <h3 className="text-lg sm:text-xl font-montserrat font-extrabold animated-underline mb-1">Address</h3>
-            <p className="text-sm sm:text-base font-lato font-medium leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-montserrat font-extrabold animated-underline mb-1">Address:</h3>
+            <p className="text-lg sm:text-xl font-lato font-semibold leading-relaxed">
               209, 2nd Floor, Vaishnavi Lamani Arcade,<br />
               Doolapally Rd, above Ratnadeep Supermarket,<br />
               Devender Colony, Kompally,<br />
@@ -90,7 +94,7 @@ export default function Contact() {
           <div className="w-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.2894872262254!2d78.486111175657!3d17.541398798349206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb85f43122e41d%3A0xde00e593dae562af!2sWILD%20GAMING%20CAFE!5e0!3m2!1sen!2sus!4v1751002753240!5m2!1sen!2sus"
-              className="w-full h-48 sm:h-56 md:h-64 rounded-md border-0"
+              className="w-full h-56 sm:h-56 md:h-64 rounded-md border-0"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

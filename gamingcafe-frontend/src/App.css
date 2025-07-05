@@ -123,6 +123,7 @@ body {
 }
 /*slide-animation-2 end*/
 
+/*game-lib start*/
 .stroke-text {
   -webkit-text-stroke: 4px white; /* Adjust thickness & color */
   color: transparent;
@@ -138,3 +139,40 @@ body {
   box-shadow: 0px 0px 15px 11px #ff993c;
   color: #bbaaaa;
 }
+/*game-lib end*/
+/*animation -3 start*/
+.sliding-bg-1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  z-index: -1;
+  opacity: 0.5;
+  background-image: linear-gradient(
+    -60deg,
+    #155f9a 40%,
+    #1175c3 30%,
+    #066eb7 30%
+  );
+  animation: slide 8s ease-in-out infinite alternate;
+}
+
+.sliding-bg-1.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 10s;
+}
+
+.sliding-bg-1.bg3 {
+  animation-duration: 12s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+/*animation -3 end*/
