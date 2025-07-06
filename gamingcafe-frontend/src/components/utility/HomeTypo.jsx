@@ -21,8 +21,10 @@ const HomeTypo = () => {
 //       </div>
 //     </section>
 
-<section className="bg-black dark:bg-gray-900 w-full flex items-center">
-  <div className="max-w-screen-xl mx-auto px-4 py-8 flex flex-col md:flex-row flex-wrap items-center justify-center gap-8">
+<section className="bg-black w-full flex items-center">
+
+  
+  <div className=" mx-auto px-4 py-8 flex flex-col md:flex-row flex-wrap items-center justify-center gap-8">
 
     {/* Text in center */}
     <div className="text-center px-4 sm:px-6 flex-1 min-w-[280px]">

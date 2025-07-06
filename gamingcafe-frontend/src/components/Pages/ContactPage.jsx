@@ -1,18 +1,10 @@
 import bgImage from '../../assets/aigamer.jpg';
 import { useState } from 'react';
 
-import {
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaTwitter,
-  FaWhatsapp,
-  FaInstagram,
-  FaDiscord,
-  FaChevronDown
-} from 'react-icons/fa';
+import {FaChevronDown } from 'react-icons/fa';
 import LogoColors from '../Animations/LogoColors';
-
+import '../Animations/StarryDrip.css';
+import starrynight from '../../assets/starrynight.jpg';
 
 export default function Contact() {
   const drawers = [
@@ -62,11 +54,20 @@ export default function Contact() {
       </section>
 
       {/* RIGHT PANEL */}
-      <aside className="relative w-full bg-[#ff993c] md:w-2/5 flex items-start md:items-center justify-center py-8 md:py-16 px-4 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <LogoColors />
-        </div>
-        <div className="text-black w-full max-w-md space-y-6  ">
+      <aside className="relative w-full bg-black md:w-2/5 flex items-start md:items-center justify-center py-8 md:py-16 px-4 overflow-hidden">
+          <div class="lines absolute inset-0 z-0">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        <div className="text-white w-full max-w-md space-y-6  z-10 ">
           {/* Phone */}
           <div>
             <h3 className="text-xl sm:text-2xl font-montserrat font-extrabold animated-underline mb-1">Phone:</h3>

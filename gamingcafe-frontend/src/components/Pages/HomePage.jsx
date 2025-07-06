@@ -5,6 +5,7 @@ import video from "../../assets/4k_1.mov";
 import ParticlesBackgroundTri from "../Animations/ParticlesBackgroundTri";
 
 const HomePage = () => {
+  
   return (
     // Remove h-screen. The main will now expand to fit its content.
     // Use min-h-screen if you want it to be AT LEAST a screen height, but

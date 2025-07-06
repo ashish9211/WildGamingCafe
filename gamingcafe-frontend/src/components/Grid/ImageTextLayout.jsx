@@ -5,6 +5,9 @@ import heroImg1 from "../../assets/lounge21.jpg";
 import heroImg from "../../assets/lounge1.jpg"; // Add your image path
 const ImageTextLayout = ()=>{
     const location = useLocation();
+    useEffect(()=>{
+       window.scrollTo(0,0)
+    },[]);
 
     useEffect(() => {
     // Scroll to section if hash exists
@@ -20,7 +23,7 @@ const ImageTextLayout = ()=>{
           {/* <div className="absolute inset-0 z-0 pointer-events-none bg-blue-600">
               <ParticlesBackgroundTri />
           </div> */}
-          <div className="relative min-h-screen flex flex-col overflow-hidden">
+          <div id="top" className="relative min-h-screen flex flex-col overflow-hidden">
       
                 <div className="sliding-bg"></div>
                 <div className="sliding-bg bg2"></div>

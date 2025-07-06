@@ -1,0 +1,144 @@
+.lines {
+  position: absolute; /* Already in JSX, but good to reiterate */
+  top: 0; /* Already in JSX, but good to reiterate */
+  left: 0; /* Already in JSX, but good to reiterate */
+  right: 0; /* Already in JSX, but good to reiterate */
+  height: 100%; /* Already in JSX, but good to reiterate */
+  /* Remove width: 90vw; - it should now implicitly take 100% of its parent (.aside) */
+  /* Remove margin: auto; - it's no longer necessary with inset-0 */
+  display: flex;
+  justify-content: space-around; /* Changed from space-between to space-around */
+  /* space-around will give some padding on the ends, space-evenly for more uniform distribution */
+  /* If you want lines across the entire width of the aside,
+     you might even consider padding-left/right on .lines or
+     increasing the number of lines. */
+}
+
+.line {
+  position: relative;
+  width: 1px; /* The actual line width */
+  height: 100%;
+  overflow: hidden; /* Crucial for clipping the gradient */
+}
+
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh; /* Height of the falling gradient */
+  width: 100%; /* Make it match the line's 1px width */
+  top: -50%;
+  left: 0;
+  /* Default background, overridden by nth-child */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+/* Specific colors and delays for each line */
+/* Adjust the animation-delay values as needed to get the desired staggered effect */
+.line:nth-child(1)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ff4500 75%,
+    #ff4500 100%
+  );
+  animation-delay: 0.5s;
+}
+.line:nth-child(2)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #32cd32 75%,
+    #32cd32 100%
+  );
+  animation-delay: 1s;
+}
+.line:nth-child(3)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #1e90ff 75%,
+    #1e90ff 100%
+  );
+  animation-delay: 1.5s;
+}
+.line:nth-child(4)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffd700 75%,
+    #ffd700 100%
+  );
+  animation-delay: 2s;
+}
+.line:nth-child(5)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #8a2be2 75%,
+    #8a2be2 100%
+  );
+  animation-delay: 2.5s;
+}
+.line:nth-child(6)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #20b2aa 75%,
+    #20b2aa 100%
+  );
+  animation-delay: 3s;
+}
+.line:nth-child(7)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #dc143c 75%,
+    #dc143c 100%
+  );
+  animation-delay: 3.5s;
+}
+.line:nth-child(8)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #00fa9a 75%,
+    #00fa9a 100%
+  );
+  animation-delay: 4s;
+}
+.line:nth-child(9)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ff1493 75%,
+    #ff1493 100%
+  );
+  animation-delay: 4.5s;
+}
+.line:nth-child(10)::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #00bfff 75%,
+    #00bfff 100%
+  );
+  animation-delay: 5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%; /* Ensure it goes completely off screen at the bottom */
+  }
+}

@@ -14,6 +14,7 @@ import GameLibrary from './components/Pages/GameLibrary';
 import BeachWaveAnimation from './components/Animations/BeachWaveAnimation';
 import ImageTextLayout from './components/Grid/ImageTextLayout';
 import PromoPage from './components/Pages/PromoPage';
+import ScrollToTop from './components/utility/ScrollToTop';
 
 function App() {
   
@@ -21,7 +22,7 @@ function App() {
   return (
     <>
    <BrowserRouter  >
-    
+      <ScrollToTop/>
       <Navbar/>
         <Routes>
             
