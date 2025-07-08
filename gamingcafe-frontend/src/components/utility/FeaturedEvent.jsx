@@ -3,7 +3,7 @@ import React from 'react';
 // 1. Import your static images here
 // Make sure these paths are correct relative to this file
 import gacs from '../../assets/events/GACS.png';
-import valorant from '../../assets/events/vc.avif'; // Assuming you have a valorant.png
+import valorant from '../../assets/events/valorant.png'; // Assuming you have a valorant.png
 import fortnite from '../../assets/events/fortnite.png'; // Assuming you have a fortnite.png
 import league from '../../assets/events/lol.jpg';     // Assuming you have a league.png
 import dota2  from '../../assets/events/dota2.avif';       // Assuming you have a smash.png
