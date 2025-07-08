@@ -187,7 +187,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        <a href="/gaminglounge#top" onClick={handleLinkClick} className="animated-underline text-white text-xl font-bold">
+        <a href="/gaminglounge" onClick={handleLinkClick} className="animated-underline text-white text-xl font-bold">
           GAMING LOUNGE
         </a>
         <a href="/events" onClick={handleLinkClick} className="animated-underline text-white text-xl font-bold">

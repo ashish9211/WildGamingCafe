@@ -5,7 +5,8 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    ".flowbite-react\\class-list.json"
+    ".flowbite-react\\class-list.json",
+    "./node_modules/tw-elements-react/dist/js/**/*.js",
   ],
   theme: {
     extend: {
@@ -34,6 +35,7 @@ export default {
   },
   plugins: [
     flowbiteReact, // Correctly placed as an element in the array
+    require("tw-elements-react/dist/plugin.cjs"),
     function({ addUtilities }) {
       addUtilities({
         '.box-reflect': {

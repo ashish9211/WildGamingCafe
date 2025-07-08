@@ -3,6 +3,10 @@ import { Button } from "flowbite-react";
 import PortraitCarousel from "../utility/PortraitCarousel"; 
 import video from "../../assets/4k_1.mov";
 import ParticlesBackgroundTri from "../Animations/ParticlesBackgroundTri";
+import EventSection from "../utility/EventSection";
+import EventCarousel from "../utility/EventCarousel";
+import FeaturedEvent from "../utility/FeaturedEvent";
+import FeaturedEvent1 from "../EXTRAS/FeaturedEvent1";
 
 const HomePage = () => {
   
@@ -59,6 +63,23 @@ const HomePage = () => {
       </section>
 
       
+      <section className="bg-black text-white"> 
+        <div className="mx-auto px-4">
+           <EventSection />
+        </div>
+      </section>
+
+      <section className="bg-black"> 
+         <EventCarousel />
+      </section>
+       
+      <section className="bg-black"> 
+         <FeaturedEvent/>
+      </section>
+
+      <section className="bg-black"> 
+         <FeaturedEvent1/>
+      </section>
 
     </main>
   );
