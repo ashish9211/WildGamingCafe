@@ -1,34 +1,92 @@
 import video from '../../assets/comingsoon.mp4'
 import ParticleBackLive from '../Animations/ParticleBackLive';
+import './EventsPage.css';
+import EventCard from '../utility/EventCard'; // 
+import gacs from '../../assets/events/GACS.png';
+import valorant from '../../assets/events/valorant.png';
+import {useState} from 'react';
+
 const EventsPage = () =>{
-    return (
-    // <div className="w-full h-screen bg-black flex items-center justify-center">
-    //   {/* <video
-    //     src={video}
-    //     autoPlay
-    //     loop
-    //     muted
-    //     className="w-full h-full object-cover"
-    //   /> */}
-    //   <div className="absolute inset-0 z-10 pointer-events"><ParticleBackLive/></div>
-      
-    //   {/* Optional overlay text */}
-    //   <div className="absolute inset-0 flex flex-col items-center justify-center">
-    //     <h1 className="text-white text-[72px] md:text-[120px] font-poppins font-extrabold ">
-    //       Under Construction
-    //     </h1>
-    //     <p className='font-lato font-semibold text-white text-[48px]'>SEE YOU SOON!!</p>
-    //   </div>
+  const events = [
+    {
+        id: 1,
+        image: gacs, // Referencing the imported image variable
+        title: 'GA:CS | Operation Freedom',
+        subtitle: 'GA:CS RETURNS',
+        description: 'OPERATION FREEDOM LANDS AT GA IN JULY 2025.',
+        prize: 'With up to $2000 Prizing!',
+        entry: '$250 Team Entry',
+        pool: 'Tiered Prize Pool',
+        cap: '16 Team Cap',
+        link: '#', // Placeholder link
+      },
+      {
+        id: 2,
+        image: valorant, // Referencing the imported image variable
+        title: 'Valorant Ascendant Clash',
+        subtitle: 'SUMMER SHOWDOWN',
+        description: 'DOMINATE THE RANKS IN OUR VALORANT TOURNAMENT.',
+        prize: 'Up to $1500 Cash Prize!',
+        entry: '$150 Per Player',
+        pool: 'Single Elimination',
+        cap: '32 Player Cap',
+        link: '#',
+      },
+    // Add more events here
+  ]; 
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % events.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + events.length) % events.length);
+  };
+
+  const currentEvent = events[currentCardIndex];
+  return (
+       
+    // <div className="w-screen h-screen flex justify-center items-center bg-black ">
+    //   <h1 className="relative w-full xl:text-9xl md:text-8xl text-5xl sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+    //     Coming Soon
+    //   </h1>
     // </div>
 
-    
-    <div className="w-screen h-screen flex justify-center items-center bg-black ">
-      <h1 className="relative w-full xl:text-9xl md:text-8xl text-5xl sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
-        Coming Soon
-      </h1>
-    </div>
+    <section className="events-section">
+      <div className="events-content-wrapper">
+        <div className="left-half">
+          <h1 className='font-poppins font-extrabold animated-underline'>EVENTS</h1>
+          <p className='font-montserrat font-semibold '>
+            Join us for an exciting array of upcoming events! From workshops and seminars to community gatherings and celebrations, there's always something happening. Explore our calendar and mark your dates to be part of memorable experiences.
+          </p>
+        </div>
+        <div className="right-half">
+          {/* Card Container for centering and padding */}
+          <div className="card-container">
+            <EventCard event={currentEvent} />
+          </div>
 
-
+          {/* Navigation Buttons */}
+          <div className="nav-buttons">
+            <button
+              onClick={handlePrev}
+              className="nav-button"
+              disabled={events.length <= 1} // Disable if only one card
+            >
+              &#8249; {/* Left arrow HTML entity */}
+            </button>
+            <button
+              onClick={handleNext}
+              className="nav-button"
+              disabled={events.length <= 1} // Disable if only one card
+            >
+              &#8250; {/* Right arrow HTML entity */}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 export default EventsPage;
