@@ -28,6 +28,11 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  /* overflow-y: scroll;  <-- ADD THIS LINE */
+}
+
 /* Common wave background style */
 .sliding-bg {
   position: fixed;

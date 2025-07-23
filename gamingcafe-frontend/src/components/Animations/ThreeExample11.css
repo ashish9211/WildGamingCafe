@@ -1,0 +1,27 @@
+.three-background-container {
+  /* These styles make the container fill its parent and hide overflow */
+  position: absolute; /* Crucial: Position absolutely within the relative section */
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill the section's width */
+  height: 100%; /* Fill the section's height */
+  overflow: hidden;
+  z-index: -1; /* Send it to the background */
+  /* NEW BACKGROUND GRADIENT */
+  background: radial-gradient(
+    ellipse at top,
+    #1a1a2e 0%,
+    #0f0f20 100%
+  ); /* Deep space/futuristic feel */
+  /* You can experiment with other gradients: */
+  /* background: linear-gradient(135deg, #0a0a0a 0%, #1a0f2c 50%, #0a0a0a 100%); */
+  /* background: linear-gradient(to bottom, #16213e, #0f3460); */
+}
+
+/* Ensure the canvas itself fills its container */
+canvas {
+  width: 100% !important; /* Important to override default canvas sizing if any */
+  height: 100% !important; /* Important to override default canvas sizing if any */
+  display: block; /* Remove extra space below canvas */
+  touch-action: none; /* Helps with touch interactions on canvas */
+}

@@ -8,9 +8,9 @@ import starrynight from '../../assets/starrynight.jpg';
 
 export default function Contact() {
   const drawers = [
-    { label: 'General Inquiries', content: 'For general questions, email us at info@wildgamingcafe.com.' },
-    { label: 'Tournaments', content: 'Need a venue for your next tournament? We’ve got you covered. Send us an email at events@wildgamingcafe.com' },
-    { label: 'Collaborations', content: 'Interested in collaborating? Reach out at partners@wildgamingcafe.com.' },
+    { label: 'General Inquiries', content: 'For general questions, email us at wildgamingcafe@gmail.com.' },
+     { label: 'Tournaments', content: 'Need a venue for your next tournament? We’ve got you covered. Send us an email at wildgamingcafe@gmail.com' },
+    // { label: 'Collaborations', content: 'Interested in collaborating? Reach out at partners@wildgamingcafe.com.' },
   ];
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -71,31 +71,32 @@ export default function Contact() {
           {/* Phone */}
           <div>
             <h3 className="text-xl sm:text-2xl font-montserrat font-extrabold animated-underline mb-1">Phone:</h3>
-            <p className="text-xl  font-semibold font-lato  sm:text-xl">+91-12345-67890</p>
+            <p className="text-xl  font-semibold font-lato  sm:text-xl">+91-9381923198</p>
           </div>
           {/* Hours */}
           <div>
             <h3 className="text-xl sm:text-2xl font-montserrat font-extrabold animated-underline mb-1">Hours:</h3>
             <p className="text-lg sm:text-xl font-lato font-semibold leading-relaxed">
-              Mon–Fri:  9 AM–12 PM<br />
-              Sat–Sun: 12 PM–12 AM
+              Mon–Sun:  9 AM–11 PM
+              
             </p>
           </div>
           {/* Address */}
           <div>
             <h3 className="text-xl sm:text-2xl font-montserrat font-extrabold animated-underline mb-1">Address:</h3>
             <p className="text-lg sm:text-xl font-lato font-semibold leading-relaxed">
-              209, 2nd Floor, Vaishnavi Lamani Arcade,<br />
-              Doolapally Rd, above Ratnadeep Supermarket,<br />
-              Devender Colony, Kompally,<br />
-              Hyderabad, Telangana 500014, India
+              Wild Gaming Cafe, 209, 2nd Floor,<br />
+              Vaishnavi Lamani Arcade, Dulapally Road,<br />
+              Above Ratnadeep Supermarket,<br />
+              Kompally, Hyderabad,<br />
+              Telangana - 500014.
             </p>
           </div>
           {/* Embedded Map */}
           <div className="w-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.2894872262254!2d78.486111175657!3d17.541398798349206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb85f43122e41d%3A0xde00e593dae562af!2sWILD%20GAMING%20CAFE!5e0!3m2!1sen!2sus!4v1751002753240!5m2!1sen!2sus"
-              className="w-full h-56 sm:h-56 md:h-64 rounded-md border-0"
+              className="w-full h-56 sm:h-56 md:h-72 rounded-md border-0"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ParticlesBackgroundTri from "../Animations/ParticlesBackgroundTri";
-import heroImg1 from "../../assets/lounge21.jpg";
+import heroImg1 from "../../assets/lounge22.jpg";
 import heroImg from "../../assets/lounge1.jpg"; // Add your image path
 const ImageTextLayout = ()=>{
     const location = useLocation();
@@ -71,7 +71,7 @@ const ImageTextLayout = ()=>{
             
             
 
-            <section id="games" className="w-full max-w-5xl h-full z-10 mx-auto mt-[8vh] md:mt-[25vh] mb-[8vh] md:mb-[25vh] px-8">
+            <section id="games" className="w-full max-w-5xl h-full z-10 mx-auto mt-[8vh] md:mt-[25vh] mb-[8vh] md:mb-[25vh] px-8 scroll-mt-[200px]">
                  {/* Image for small screens - on top */}
                  <div className="md:hidden mb-6 z-20">
                      <img
@@ -116,7 +116,7 @@ const ImageTextLayout = ()=>{
             </section>
 
             {/* New Component Section */}
-            <section id="rates" className="w-full max-w-5xl h-full z-10 mx-auto mt-[8vh] md:mt-[25vh] mb-[10vh] md:mb-[20vh] px-8 pb-16">
+            <section id="rates" className="w-full max-w-5xl h-full z-10 mx-auto mt-[8vh] md:mt-[25vh] mb-[10vh] md:mb-[20vh] px-8 pb-16 scroll-mt-[200px]">
                 <div className="relative w-full h-fit">
                     <div className="bg-blue-700 bg-opacity-25 w-full max-w-[85%] md:max-w-[90%] h-[140px] rounded-md border-8 border-white mx-auto relative" />
                      
@@ -144,14 +144,34 @@ const ImageTextLayout = ()=>{
                             {/* Consoles Dropdown */}
                             <details className="bg-black rounded-lg border border-gray-600">
                                 <summary className="cursor-pointer p-4 text-white font-bold text-lg font-montserrat hover:bg-gray-700 rounded-lg">
-                                    Consoles
+                                    PS5
                                 </summary>
-                                <div className="p-4 border-t border-gray-600 text-white text-sm">
+                                {/* <div className="p-4 border-t border-gray-600 text-white text-sm">
                                     <p className="font-semibold font-lato mb-2">Per Hour</p>
-                                    <p>₹150 1-2 Guests</p>
+                                    <p>₹180 1-2 Guests</p>
                                     <p>₹250 3-4 Guests</p>
                                     <p>₹300 5+ Guests</p>
                                     <p className="mt-3 text-gray-300">We offer PS5 & PS4 setups.</p>
+                                </div> */}
+                                <div className="p-4 border-t border-gray-600 text-white text-sm">
+                                    <p className="font-semibold font-lato mb-2">PS5 Rates</p> 
+                                    
+                                    {/* Per Hour Pricing */}
+                                    <p className="font-semibold text-gray-300 mt-2 mb-1">Per Hour</p>
+                                    <ul className="list-disc list-inside ml-2 mb-2"> {/* Using a list for prices */}
+                                        <li>1 Player &nbsp;&nbsp;&nbsp;&nbsp;: ₹180 (Standard)</li>
+                                        <li>1 Player &nbsp;&nbsp;&nbsp;&nbsp;: ₹220 (New Games)</li>
+                                    
+                                        <li>1-2 Players: ₹250 (Standard)</li>
+                                        <li>1-2 Players: ₹300 (New Games)</li>
+                                        <li>2-4 Players: ₹400 (Standard)</li>
+                                        <li>2-4 Players: ₹500 (New Games)</li>
+                                    </ul>
+
+                                    {/* New Game Definition */}
+                                    <p className="mt-3 text-gray-300 text-xs italic">
+                                        *New Games are considered those within 2 months of launch.
+                                    </p>
                                 </div>
                             </details>
                             
@@ -161,11 +181,12 @@ const ImageTextLayout = ()=>{
                                     Computers
                                 </summary>
                                 <div className="p-4 border-t border-gray-600 text-white text-sm">
-                                    <p>₹100 - 1 Hour</p>
-                                    <p>₹250 - 3 Hours</p>
-                                    <p>₹400 - 6 Hours</p>
-                                    <p className="mt-3">Day Pass: ₹800</p>
-                                    <p className="mt-3 text-gray-300 text-xs">*Note: Day Pass time does not stay on the users account past the end of the day. All other hourly options stay on the users account for future use.</p>
+                                    <p>1 Hour &nbsp;  - ₹120</p>
+                                    <p>2 Hours - ₹220</p>
+                                    <p>5 Hours - ₹500</p>
+                                    <p>8 Hours - ₹720</p>
+                                    
+                                    <p className="mt-3 text-gray-300 text-xs">*Note:All hourly options stay on the users account for future use.</p>
                                 </div>
                             </details>
                         </div>

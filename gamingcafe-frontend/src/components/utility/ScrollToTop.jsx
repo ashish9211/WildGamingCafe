@@ -1,13 +1,20 @@
+// src/components/ScrollToTop.jsx
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToTop() {
-  const location = useLocation(); // Get the entire location object
+  const location = useLocation();
 
   useEffect(() => {
-    console.log("Location changed to:", location.pathname + location.hash, ". Scrolling to top.");
-    window.scrollTo(0, 0);
-  }, [location]); // Depend on the entire location object
+    // Only scroll to the top if there is no hash in the URL
+    // This allows browser's default (and scroll-margin-top) to handle hash links
+    if (!location.hash) {
+      console.log("Navigating to:", location.pathname, ". No hash, scrolling to top.");
+      window.scrollTo(0, 0);
+    } else {
+      console.log("Hash detected:", location.hash, ". Letting browser handle scroll.");
+    }
+  }, [location]);
 
   return null;
 }

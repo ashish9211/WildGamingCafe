@@ -1,0 +1,23 @@
+.three-background-container {
+  /* These styles make the container fill its parent and hide overflow */
+  width: 100%; /* Make it fill the width of its parent */
+  height: 100%; /* Make it fill the height of its parent */
+  position: absolute; /* Position it absolutely relative to a positioned parent */
+  top: 0;
+  left: 0;
+  overflow: hidden; /* Crucial to hide anything outside this container */
+  z-index: -1; /* Send it to the background, behind other content */
+  background: radial-gradient(
+    ellipse at top,
+    #1a1a2e 0%,
+    #0f0f20 100%
+  ); /* Example background */
+}
+
+/* Ensure the canvas itself fills its container */
+canvas {
+  width: 100% !important; /* Important to override default canvas sizing if any */
+  height: 100% !important; /* Important to override default canvas sizing if any */
+  display: block; /* Remove extra space below canvas */
+  touch-action: none; /* Helps with touch interactions on canvas */
+}

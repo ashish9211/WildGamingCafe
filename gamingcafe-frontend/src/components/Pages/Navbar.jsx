@@ -1,4 +1,4 @@
-import logo1 from '../../assets/logo1.png';
+import logo1 from '../../assets/logo4.png';
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react'; // Import useRef and useLocation
 
@@ -79,7 +79,7 @@ const Navbar = () => {
             <img
               src={logo1}
               alt="Wild Gaming Logo"
-              className="w-16 h-14 sm:w-18 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 "
+              className="w-full h-16 sm:w-full sm:h-16 md:w-full md:h-20 lg:w-full lg:h-24 "
             />
           </Link>
         </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 ml-auto pr-4 sm:pr-6 lg:pr-8">
           {/* Social Icons */}
           <div className="flex space-x-2 sm:space-x-3">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <div className="w-7 h-7 rounded bg-transparent group flex items-center justify-center cursor-pointer transition duration-300 border hover:bg-white">
                 <i className="fa-brands fa-twitter text-white group-hover:text-black text-base transition"></i>
               </div>
@@ -110,7 +110,7 @@ const Navbar = () => {
               <div className="w-7 h-7 rounded bg-transparent group flex items-center justify-center cursor-pointer transition duration-300 border border-white hover:bg-white">
                 <i className="fa-brands fa-whatsapp text-white group-hover:text-black text-base transition"></i>
               </div>
-            </a>
+            </a> */}
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <div className="w-7 h-7 rounded bg-transparent group flex items-center justify-center cursor-pointer transition duration-300 border hover:bg-white">
                 <i className="fa-brands fa-instagram text-white group-hover:text-black text-base transition"></i>
