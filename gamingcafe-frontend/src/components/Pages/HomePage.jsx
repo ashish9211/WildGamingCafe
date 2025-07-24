@@ -1,13 +1,11 @@
 import HomeTypo from "../utility/HomeTypo";
-import { Button } from "flowbite-react"; 
 import PortraitCarousel from "../utility/PortraitCarousel"; 
-//import video from "../../assets/4k_1.mov";
-import video from "../../assets/homevid2.mp4";
+import video from "../../assets/homevid3.mp4";
 import ParticlesBackgroundTri from "../Animations/ParticlesBackgroundTri";
 import EventSection from "../utility/EventSection";
 import EventCarousel from "../utility/EventCarousel";
 import FeaturedEvent from "../utility/FeaturedEvent";
-import FeaturedEvent1 from "../EXTRAS/FeaturedEvent1";
+//import FeaturedEvent1 from "../EXTRAS/FeaturedEvent1";
 
 const HomePage = () => {
   

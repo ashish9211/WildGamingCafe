@@ -4,13 +4,13 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/autoplay';
 
-import img1 from '../../assets/valorant.jpg';
-import img2 from '../../assets/cod.jpg';
-import img3 from '../../assets/pubg.jpg';
-import img4 from '../../assets/fc25.jpg';
-import img5 from '../../assets/dota2.jpg';
-import img6 from '../../assets/age.jpg';
-import img7 from '../../assets/gta.jpg';
+import img1 from '../../assets/tinified/valorant.jpg';
+import img2 from '../../assets/tinified/cod.jpg';
+import img3 from '../../assets/tinified/pubg.jpg';
+import img4 from '../../assets/tinified/fc25.jpg';
+import img5 from '../../assets/tinified/dota2.jpg';
+import img6 from '../../assets/tinified/age.jpg';
+import img7 from '../../assets/tinified/gta.jpg';
 
 const images = [img1, img2, img3, img4, img5, img6 ,img7];
 
@@ -26,14 +26,7 @@ const PortraitCarousel = () => {
       speed={1500}
       grabCursor={true}
       className="w-full h-96 will-change-transform"
-      // breakpoints={{
-      //   320: { slidesPerView: 2 },    // phones portrait
-      //   480: { slidesPerView: 3 },    // phones landscape
-      //   768: { slidesPerView: 4 },    // tablets
-      //   1024: { slidesPerView: 6 },   // small desktops
-      //   1280: { slidesPerView: 8 },   // large screens like yours
-      //   1600: { slidesPerView: 10 },  // ultra-wide
-      // }}
+      lazy={true}
     >
       {[...images, ...images ].map((src, index) => (
         <SwiperSlide

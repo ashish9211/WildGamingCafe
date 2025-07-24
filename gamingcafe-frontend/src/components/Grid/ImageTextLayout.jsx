@@ -60,7 +60,7 @@ const ImageTextLayout = ()=>{
                     {/* Description text - positioned below black box and after image */}
                     <div className="mt-8 md:mt-12 md:ml-[560px] max-w-[90%] md:max-w-[calc(100%-560px)] mx-auto md:mx-0 px-4 md:px-0">
                         <p className="text-white text-base font-montserrat font-semibold md:text-lg leading-relaxed text-center md:text-left">
-                            Step into the ultimate gaming universe. Our cafe is equipped with cutting-edge PC setups and a diverse array of console stations, featuring the latest Xbox and PlayStation 5 systems, alongside other popular consoles. Get ready for unparalleled immersion and unforgettable gaming moments.
+                            Step into the ultimate gaming universe. Our cafe is equipped with cutting-edge PC setups and  the latest  PlayStation-5 systems. Get ready for unparalleled immersion and unforgettable gaming moments.
                         </p>
                     </div>
                 </div>
@@ -132,10 +132,10 @@ const ImageTextLayout = ()=>{
                         <div className="md:w-1/2">
                             <p className="text-white text-base font-montserrat font-semibold md:text-lg leading-relaxed text-center md:text-left">
                                 Our PCs save the hours you purchase on your personal account, so you can<br />
-                                <strong>Just Login and Play!</strong><br /><br />
-                                Consoles and Racing Sims are perfect for friends and family as you purchase game time by the hour per group!<br /><br />
+                                <strong className='text-gray-900'>Just Login and Play!</strong><br /><br />
+                                Playstation-5 are perfect for friends and family as you purchase game time by the hour per group!<br /><br />
                                 We offer a number of hourly rates to fit you and your friends -<br />
-                                <strong>Check them out!</strong>
+                                <strong className='text-gray-900'>Check them out!</strong>
                             </p>
                         </div>
                         
@@ -154,8 +154,7 @@ const ImageTextLayout = ()=>{
                                     <p className="mt-3 text-gray-300">We offer PS5 & PS4 setups.</p>
                                 </div> */}
                                 <div className="p-4 border-t border-gray-600 text-white text-sm">
-                                    <p className="font-semibold font-lato mb-2">PS5 Rates</p> 
-                                    
+                                                                      
                                     {/* Per Hour Pricing */}
                                     <p className="font-semibold text-gray-300 mt-2 mb-1">Per Hour</p>
                                     <ul className="list-disc list-inside ml-2 mb-2"> {/* Using a list for prices */}

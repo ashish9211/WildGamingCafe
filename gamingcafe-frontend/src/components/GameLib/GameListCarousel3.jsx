@@ -11,19 +11,9 @@ import 'swiper/css';
 import 'swiper/css/free-mode'; // Needed for freeMode functionality
 
 
-// Assuming these are still used in your overall layout
-import ParticlesBackgroundTri from "../Animations/ParticlesBackgroundTri";
-import ParticlesBackground1 from "../Animations/ParticleBackground1";
-
-// IMPORTANT: Ensure these match the sectionIds in your GameListBlocks component!
-// Make sure you have 'font-poppins' added to your Tailwind config's theme.fontFamily
-import featuredBg from '../../assets/GamelibBackgrounds/feature-back-5.png';
-import multiplayerBg from '../../assets/GamelibBackgrounds/background-ai.png';
-// import singleplayerBg from '../../assets/GamelibBackgrounds/singleplayer.jpg';
+import featuredBg from '../../assets/GamelibBackgrounds/featured.jpg';
 import singleplayerBg from '../../assets/GamelibBackgrounds/singleplayer4.jpg';
-import fightingBg from '../../assets/GamelibBackgrounds/background-ai.png';
 import shootersBg from '../../assets/GamelibBackgrounds/playstation-1.webp';
-import rtsBg from '../../assets/GamelibBackgrounds/background-ai.png';
 import rpgBg from '../../assets/GamelibBackgrounds/racing-1.png';
 import sportsBg from '../../assets/GamelibBackgrounds/sports-2.png';
 

@@ -3,6 +3,7 @@ import { FreeMode, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/autoplay';
+ 
 
 import event1 from '../../assets/events/event1.jpg';
 import event2 from '../../assets/events/event2.jpg';
@@ -27,6 +28,7 @@ const EventCarousel = () => {
       speed={1500}
       grabCursor={true}
       className="w-full h-96 will-change-transform"
+      lazy={true} // Enable lazy loading for the Swiper instance
     >
       {[...eventImages, ...eventImages].map((src, index) => (
         <SwiperSlide

@@ -1,10 +1,8 @@
 import bgImage from '../../assets/aigamer.jpg';
 import { useState } from 'react';
-
 import {FaChevronDown } from 'react-icons/fa';
-import LogoColors from '../Animations/LogoColors';
 import '../Animations/StarryDrip.css';
-import starrynight from '../../assets/starrynight.jpg';
+
 
 export default function Contact() {
   const drawers = [

@@ -1,5 +1,3 @@
-import video from '../../assets/comingsoon.mp4'
-import ParticleBackLive from '../Animations/ParticleBackLive';
 import './EventsPage.css';
 import EventCard from '../utility/EventCard'; // 
 import gacs from '../../assets/events/GACS.png';
